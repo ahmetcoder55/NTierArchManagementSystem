@@ -18,6 +18,8 @@ namespace Business.Concrete.Extensions
 
             services.AddScoped<IProductService, ProductManager>();
             services.AddScoped<ICategoryService, CategoryManager>();
+            services.AddScoped<IOrderService, OrderManager>();
+            services.AddScoped<IOrderItemService, OrderItemManager>();
 
             services.AddScoped<IServiceManager, ServiceManager>();
         }

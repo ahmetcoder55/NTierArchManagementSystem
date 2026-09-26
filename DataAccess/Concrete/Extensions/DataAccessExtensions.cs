@@ -2,7 +2,6 @@
 using DataAccess.Abstract.UnitOfWorks;
 using DataAccess.Concrete.Context;
 using DataAccess.Concrete.Repositories;
-using DataAccess.Concrete.UnitOfWork;
 using DataAccess.Concrete.UnitOfWorks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;

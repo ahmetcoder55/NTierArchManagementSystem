@@ -14,11 +14,14 @@ namespace Business.Concrete.UnitOfWorks
 
         private readonly IOrderService _orderService;
 
-        public ServiceManager(IProductService productService, ICategoryService categoryService, IOrderService orderService)
+        private readonly IOrderItemService _orderItemService;
+
+        public ServiceManager(IProductService productService, ICategoryService categoryService, IOrderService orderService, IOrderItemService orderItemService)
         {
             _productService = productService;
             _categoryService = categoryService;
             _orderService = orderService;
+            _orderItemService = orderItemService;
         }
 
         public IProductService ProductService => _productService;
@@ -26,5 +29,7 @@ namespace Business.Concrete.UnitOfWorks
         public ICategoryService CategoryService => _categoryService;
 
         public IOrderService OrderService => _orderService;
+
+        public IOrderItemService OrderItemService => _orderItemService;
     }
 }
