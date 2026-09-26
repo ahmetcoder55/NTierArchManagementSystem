@@ -1,9 +1,11 @@
+using Business.Concrete.Extensions;
 using DataAccess.Concrete.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.ConfigureDatabase(builder.Configuration);
 builder.Services.ConfigureDataAccess();
+builder.Services.ConfigureServices();
 builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 
