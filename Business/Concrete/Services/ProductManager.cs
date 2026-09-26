@@ -64,9 +64,11 @@ namespace Business.Concrete.Services
             return _mapper.Map<ProductDto>(product );
         }
 
-        public Task UpdateAsync(ProductUpdateDto dto)
+        public async Task UpdateAsync(ProductUpdateDto dto)
         {
-            throw new NotImplementedException();
+            var updated=_mapper.Map<Product>(dto);
+            _unitOfWork.Product.Update(updated);
+            await _unitOfWork.SaveChangesAsync();
         }
     }
 }
