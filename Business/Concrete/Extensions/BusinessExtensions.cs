@@ -4,9 +4,6 @@ using Business.Concrete.Mapping;
 using Business.Concrete.Services;
 using Business.Concrete.UnitOfWorks;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Business.Concrete.Extensions
 {
@@ -20,6 +17,7 @@ namespace Business.Concrete.Extensions
             services.AddScoped<ICategoryService, CategoryManager>();
             services.AddScoped<IOrderService, OrderManager>();
             services.AddScoped<IOrderItemService, OrderItemManager>();
+            services.AddScoped<IAuthenticationService, Business.Concrete.Services.AuthenticationManager>();
 
             services.AddScoped<IServiceManager, ServiceManager>();
         }

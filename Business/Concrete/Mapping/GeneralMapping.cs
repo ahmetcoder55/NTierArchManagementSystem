@@ -29,6 +29,11 @@ namespace Business.Concrete.Mapping
             // Order
             CreateMap<Order, OrderDto>();
             CreateMap<OrderCreateDto, Order>();
+
+            //Auth
+
+            CreateMap<User, UserForRegistrationDto>().ReverseMap();
+            CreateMap<User, UserForAuthenticationDto>().ReverseMap();
         }
     }
 }

@@ -11,6 +11,8 @@ namespace Business.Abstract.UnitOfWorks
         public ICategoryService CategoryService { get; }
         public IOrderService OrderService    { get; }
 
+        public IAuthenticationService AuthenticationService { get; }
+
         public IOrderItemService OrderItemService { get; }
     }
 }

@@ -16,12 +16,15 @@ namespace Business.Concrete.UnitOfWorks
 
         private readonly IOrderItemService _orderItemService;
 
-        public ServiceManager(IProductService productService, ICategoryService categoryService, IOrderService orderService, IOrderItemService orderItemService)
+        private readonly IAuthenticationService _authenticationService;
+
+        public ServiceManager(IProductService productService, ICategoryService categoryService, IOrderService orderService, IOrderItemService orderItemService, IAuthenticationService authenticationService)
         {
             _productService = productService;
             _categoryService = categoryService;
             _orderService = orderService;
             _orderItemService = orderItemService;
+            _authenticationService = authenticationService;
         }
 
         public IProductService ProductService => _productService;
@@ -31,5 +34,7 @@ namespace Business.Concrete.UnitOfWorks
         public IOrderService OrderService => _orderService;
 
         public IOrderItemService OrderItemService => _orderItemService;
+
+        public IAuthenticationService AuthenticationService => _authenticationService;
     }
 }
